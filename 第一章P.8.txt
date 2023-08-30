@@ -1,0 +1,140 @@
+var price = 28.99; //建立一個名為price的變數，並把28.99賦值給它。
+var discount = 10; //建立一個名為discount的變數，並把10賦值給它。
+var total = 
+	price - (price * (discount / 100));//考慮折扣，計算新的價格，並把結果賦值給名為total的變數。 
+if (total > 25){	//拿變數total的值與25做比較。若大於25
+	freeShipping();	//則呼叫freeShipping函式做一些事情。
+}
+
+var count = 10;	//建立一個名為count的變數，並把10賦值給它。
+while (count > 0) { //只要count變數的值大於0
+	juggle(); //就呼叫juggle()函式做一些事情，並且
+	count = count - 1; //每次都在事後把count的值減1
+}
+
+var dog = {name: "Rover", weight:35}; //以name(名稱)與weight(重量)為屬性來建立一個dog變數。
+
+if (dog.weight > 30) { //若dog的重量大於30
+	alert("WOOF WOOF"); //發出"WOOF WOOF"訊息到瀏覽器的網頁
+}else{ //否則
+	alert("woof woof"); //發出"woof woof"訊息到瀏覽器的網頁
+}
+
+var circleRadius = 20; //建立一個名為circleRadius的變數，並把20賦值給它。
+var circleArea = //建立一個名為circleArea的變數
+	Math.PI * (circleRadius * circleRadius); //並把此運算式的結果賦值給它 (1256.6370614359173)
+
+P.10
+建立述句
+使用JavaScript時，需要撰寫述句(statement)。每條述句代表整個運算的一小部分，所有述句合併可讓葉面具備行為能力:
+
+var age = 25; //每條述句負責一小部分的工作，像是宣告一些變數來儲存我們的值。
+var name = "Owen"; //此處，我們建立了一個變數用於儲存25這個年齡，我們還需要一個變數用於儲存"Owen"這個名字。
+
+if (age>14){ //或是做判斷，像是:使用者的年齡是否大於14?
+	alert("Sorry this page is for kids only!"); //如果是的話，提醒使用者這個頁面是給年紀較小的人看得。
+}else{
+	alert("Welcome " + name + "!"); //否則，對使用者(的名字)送出歡迎詞，像是:"Welcome Owen!"(但由於Owen的年紀是25歲，所以不會這麼做。)
+}
+
+P.11
+變數與值
+變數可以保存數值、字串、布林值以及其他值，也可以建立一個沒有初始值的變數。
+變數的開頭可以是字母、底線、$號，之後可以使用多個字母、數字、底線、$號。
+宣告一個變數時，以var關鍵字開頭；也可省略，且以分號來結束一列賦值述句。
+
+var winner = 2; //宣告一個名為winner的變數，並把2這個數值指定給它。
+
+var name = "Duke"; //把一個字符串(a string of characters，簡稱為字串string)指定給名為name的變數。
+//單、雙引號皆可，前後一致即可
+var isEligible = false; //把false這個值指定給名為isEligible的變數，true/false值稱為布林值(booleans)。
+//不可以給布林值引號
+
+P.12
+關鍵字
+關鍵字(keyword)就是JavaScript中的保留字(reserved word)。
+在JavaScript中會區分大小寫。
+以下為關鍵字清單
+break
+case
+catch
+class
+const
+continue
+debugger
+default
+---------------
+delete
+do
+else
+enum
+export
+extends
+false
+finally
+---------------
+for
+function
+if
+implements
+import
+in
+instanceof
+interface
+---------------
+let
+new
+package
+private
+protected
+public
+return
+static
+---------------
+super
+switch
+this
+throw
+true
+try
+typeof
+var
+---------------
+void
+while
+with
+yield
+
+P.18
+While迴圈的運作原理
+scoops(球數)
+var scoops = 5;
+while (scoops > 0){ //不斷重複直到scoops<0，才會執行最後一行
+	document.write("來一球!<br>");
+	scoops = scoops - 1;
+}
+document.write("沒有冰淇淋的生活是灰色的");
+
+P.25
+與使用者接觸和溝通
+
+P.27
+檢視console.log
+
+P.29
+例子：99 bottles of beer(99瓶啤酒)
+
+var word = "bottles";
+var count = 99;
+while(count > 0){
+	console.log(count+ " " + word + " of beer on the wall");
+	console.log(count+ " " + word + " of beer,");
+	console.log("Take one down, pass it around,");
+	count = count - 1;
+	if (count > 0){
+		console.log(count + " " + word + " of beer on the wall.");
+	}else{
+		console.log("No more " + word + " of beer on the wall.");
+	}
+}
+
